@@ -1,0 +1,211 @@
+:root{
+    --orange: #FB9300;
+    --blue: #00AAE6;
+    --green: #00B456;
+    --yellow: #F6D300;
+    --pink: #FF4F4F;
+    --purple: #9B57FF;
+    --grey: #FAF9FB;
+    --deep-grey: #1C1C1C;
+    --light-orange: #FFECD1;
+    --light-blue: #DBF6FF;
+    --light-green: #DBFFEC;
+    --light-yellow: #FFF6BD;
+    --light-pink: #FFE1E1;
+    --light-purple: #D2DAFF;
+}
+#template{
+    display: none;
+    position: fixed;
+    z-index: -10;
+    opacity: 50%;
+    width: 1920px;
+}
+body{
+    width: 1920px;
+    margin: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--grey);
+    color: var(--deep-grey);
+}
+a{
+    color: var(--deep-grey);
+    text-decoration: none;
+}
+.left-space{
+    margin-left: 350px;
+}
+.header-label{
+    font-size: 25px;
+    margin-left: 80px;
+    margin-top: 0px;
+}
+.card{
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 400px;
+    height: 350px;
+    cursor: pointer;
+}
+.box-deuteronomio{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(255,236,209,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(255,236,209,1);
+    box-shadow: 0px 0px 22px 0px rgba(255,236,209,0.5);
+}
+.box-juan{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(219,246,255,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(219,246,255,1);
+    box-shadow: 0px 0px 22px 0px rgba(219,246,255,1);
+}
+.box-job{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(219,255,236,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(219,255,236,1);
+    box-shadow: 0px 0px 22px 0px rgba(219,255,236,1);
+}.box-proverbios{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(255,246,189,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(255,246,189,1);
+    box-shadow: 0px 0px 22px 0px rgba(255,246,189,1);
+}
+.box-eclesiastes{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(255,225,225,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(255,225,225,1);
+    box-shadow: 0px 0px 22px 0px rgba(255,225,225,1);
+}
+.lesson-name{
+    font-size: 30px;
+    margin-bottom: 0px;
+    width: 350px;
+}
+.lesson-date{
+    font-size: 25px;
+    margin-top: 0px;
+}
+.lesson-description{
+    text-align: justify;
+}
+.book-label{
+    width: 100px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lbldeuteronomio{
+    background-color: var(--orange);
+}
+.lbljuan{
+    background-color: var(--blue);
+}
+.lbljob{
+    background-color: var(--green);
+}
+.lblproverbios{
+    background-color: var(--yellow);
+}
+.lbleclesiastes{
+    background-color: var(--pink);
+}
+.lesson-number{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+}
+.menu-option{
+    font-size: 25px;
+    margin: 20px 0px;
+    width: 300px;
+    display: block;
+    opacity: 80%;
+    cursor: pointer;
+}
+.book-one-selected, .book-two-selected,.book-three-selected,.book-four-selected,.book-five-selected,.book-six-selected,.book-seven-selected{
+    opacity: 100%;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.book-one-selected{
+    background-color: var(--orange);
+}
+.book-two-selected{
+    background-color: var(--blue);
+}
+.book-three-selected{
+    background-color: var(--green);
+}
+.book-four-selected{
+    background-color: var(--yellow);
+}
+.book-five-selected{
+    background-color: var(--pink);
+}
+.book-six-selected{
+    background-color: var(--purple);
+}
+.book-seven-selected{
+    background-color: var(--deep-grey);
+    color: white;
+}
+.hidden{
+    display: none;
+}
+#sidebar{
+    background-color: white;
+    width: 350px;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    z-index: 5;
+}
+#welcome{
+    font-size: 60px;
+    margin-left: 80px;
+    margin-top: 0px;
+    padding-top: 130px;
+    margin-bottom: 10px;
+}
+#wink-emoji{
+    height: 40px;
+    margin: auto;
+}
+#classes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-left: 60px;
+}
+#book-edition{
+    background-color: var(--orange);
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#book-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30px;
+    color: var(--orange);
+    font-weight: bold;
+}
