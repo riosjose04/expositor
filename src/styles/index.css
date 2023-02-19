@@ -5,6 +5,8 @@
     --yellow: #F6D300;
     --pink: #FF4F4F;
     --purple: #9B57FF;
+    --mint: #62B6B7;
+    --peach: #D3756B;
     --grey: #FAF9FB;
     --deep-grey: #1C1C1C;
     --light-orange: #FFECD1;
@@ -13,6 +15,8 @@
     --light-yellow: #FFF6BD;
     --light-pink: #FFE1E1;
     --light-purple: #D2DAFF;
+    --light-mint: #E3F6FF;
+    --light-peach: #FFD4D4;
 }
 #template{
     display: none;
@@ -49,29 +53,44 @@ a{
     height: 350px;
     cursor: pointer;
 }
-.box-deuteronomio{
+.box-efesios{
     -webkit-box-shadow: 0px 0px 22px 0px rgba(255,236,209,1);
     -moz-box-shadow: 0px 0px 22px 0px rgba(255,236,209,1);
     box-shadow: 0px 0px 22px 0px rgba(255,236,209,0.5);
 }
-.box-juan{
+.box-filipenses{
     -webkit-box-shadow: 0px 0px 22px 0px rgba(219,246,255,1);
     -moz-box-shadow: 0px 0px 22px 0px rgba(219,246,255,1);
     box-shadow: 0px 0px 22px 0px rgba(219,246,255,1);
 }
-.box-job{
+.box-habacuc{
     -webkit-box-shadow: 0px 0px 22px 0px rgba(219,255,236,1);
     -moz-box-shadow: 0px 0px 22px 0px rgba(219,255,236,1);
     box-shadow: 0px 0px 22px 0px rgba(219,255,236,1);
-}.box-proverbios{
+}.box-jeremias{
     -webkit-box-shadow: 0px 0px 22px 0px rgba(255,246,189,1);
     -moz-box-shadow: 0px 0px 22px 0px rgba(255,246,189,1);
     box-shadow: 0px 0px 22px 0px rgba(255,246,189,1);
 }
-.box-eclesiastes{
+.box-lamentaciones{
     -webkit-box-shadow: 0px 0px 22px 0px rgba(255,225,225,1);
     -moz-box-shadow: 0px 0px 22px 0px rgba(255,225,225,1);
     box-shadow: 0px 0px 22px 0px rgba(255,225,225,1);
+}
+.box-marcos{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(210, 218, 255,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(210, 218, 255,1);
+    box-shadow: 0px 0px 22px 0px rgba(210, 218, 255,1);
+}
+.box-ezequiel{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(227, 246, 255,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(227, 246, 255,1);
+    box-shadow: 0px 0px 22px 0px rgba(227, 246, 255,1);
+}
+.box-daniel{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(255,212,212,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(255,212,212,1);
+    box-shadow: 0px 0px 22px 0px rgba(255,212,212,1);
 }
 .lesson-name{
     font-size: 30px;
@@ -96,20 +115,29 @@ a{
     justify-content: center;
     align-items: center;
 }
-.lbldeuteronomio{
+.lblefesios{
     background-color: var(--orange);
 }
-.lbljuan{
+.lblfilipenses{
     background-color: var(--blue);
 }
-.lbljob{
+.lblhabacuc{
     background-color: var(--green);
 }
-.lblproverbios{
+.lbljeremias{
     background-color: var(--yellow);
 }
-.lbleclesiastes{
+.lbllamentaciones{
     background-color: var(--pink);
+}
+.lblmarcos{
+    background-color: var(--purple);
+}
+.lblezequiel{
+    background-color: var(--mint);
+}
+.lbldaniel{
+    background-color: var(--peach);
 }
 .lesson-number{
     width: 50px;
@@ -131,7 +159,7 @@ a{
     opacity: 80%;
     cursor: pointer;
 }
-.book-one-selected, .book-two-selected,.book-three-selected,.book-four-selected,.book-five-selected,.book-six-selected,.book-seven-selected{
+.book-one-selected, .book-two-selected,.book-three-selected,.book-four-selected,.book-five-selected,.book-six-selected,.book-seven-selected,.book-eight-selected,.book-nine-selected{
     opacity: 100%;
     margin: 0px;
     padding: 10px;
@@ -156,6 +184,12 @@ a{
     background-color: var(--purple);
 }
 .book-seven-selected{
+    background-color: var(--mint);
+}
+.book-eight-selected{
+    background-color: var(--peach);
+}
+.book-nine-selected{
     background-color: var(--deep-grey);
     color: white;
 }
@@ -175,7 +209,7 @@ a{
     font-size: 60px;
     margin-left: 80px;
     margin-top: 0px;
-    padding-top: 130px;
+    padding-top: 80px;
     margin-bottom: 10px;
 }
 #wink-emoji{
@@ -208,4 +242,23 @@ a{
     font-size: 30px;
     color: var(--orange);
     font-weight: bold;
+}
+#dateControl{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    opacity: 80%;
+    border-style: none;
+    padding: 10px 15px;
+    margin-left: 20px;
+    border-radius: 15px;
+}
+#search-button{
+    font-size: 20px;
+    background-color: var(--orange);
+    color: white;
+    border-style: none;
+    padding: 10px 15px;
+    margin-left: 20px;
+    border-radius: 15px;
+    cursor: pointer;
 }

@@ -1,10 +1,10 @@
-function filtrarDeuteronomio(evento) {
+function filtrarEfesios(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.juan, .job, .proverbios, .eclesiastes, .cantares');
+    const lessons = document.querySelectorAll('.filipenses, .habacuc, .jeremias, .lamentaciones, .marcos, .ezequiel, .daniel');
     lessons.forEach(element => {
         element.classList.add('hidden');
     });
-    const ownLessons = document.querySelectorAll('.deuteronomio');
+    const ownLessons = document.querySelectorAll('.efesios');
     ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
@@ -15,14 +15,17 @@ function filtrarDeuteronomio(evento) {
     document.getElementById('book-five').classList.remove('book-five-selected');
     document.getElementById('book-six').classList.remove('book-six-selected');
     document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
 }
-function filtrarJuan(evento) {
+
+function filtrarFilipenses(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.deuteronomio, .job, .proverbios, .eclesiastes, .cantares');
+    const lessons = document.querySelectorAll('.efesios, .habacuc, .jeremias, .lamentaciones, .marcos, .ezequiel, .daniel');
     lessons.forEach(element => {
         element.classList.add('hidden');
     });
-    const ownLessons = document.querySelectorAll('.juan');
+    const ownLessons = document.querySelectorAll('.filipenses');
     ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
@@ -33,14 +36,16 @@ function filtrarJuan(evento) {
     document.getElementById('book-five').classList.remove('book-five-selected');
     document.getElementById('book-six').classList.remove('book-six-selected');
     document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
 }
-function filtrarJob(evento) {
+function filtrarHabacuc(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.deuteronomio, .juan, .proverbios, .eclesiastes, .cantares');
+    const lessons = document.querySelectorAll('.efesios, .filipenses, .jeremias, .lamentaciones, .marcos, .ezequiel, .daniel');
     lessons.forEach(element => {
         element.classList.add('hidden');
     });
-    const ownLessons = document.querySelectorAll('.job');
+    const ownLessons = document.querySelectorAll('.habacuc');
     ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
@@ -51,14 +56,16 @@ function filtrarJob(evento) {
     document.getElementById('book-five').classList.remove('book-five-selected');
     document.getElementById('book-six').classList.remove('book-six-selected');
     document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
 }
-function filtrarProverbios(evento) {
+function filtrarJeremias(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.deuteronomio, .juan, .job, .eclesiastes, .cantares');
+    const lessons = document.querySelectorAll('.efesios, .filipenses, .habacuc, .lamentaciones, .marcos, .ezequiel, .daniel');
     lessons.forEach(element => {
         element.classList.add('hidden');
     });
-    const ownLessons = document.querySelectorAll('.proverbios');
+    const ownLessons = document.querySelectorAll('.jeremias');
     ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
@@ -69,14 +76,16 @@ function filtrarProverbios(evento) {
     document.getElementById('book-five').classList.remove('book-five-selected');
     document.getElementById('book-six').classList.remove('book-six-selected');
     document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
 }
-function filtrarEclesiastes(evento) {
+function filtrarLamentaciones(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.deuteronomio, .juan, .job, .proverbios, .cantares');
+    const lessons = document.querySelectorAll('.efesios, .filipenses, .habacuc, .jeremias, .marcos, .ezequiel, .daniel');
     lessons.forEach(element => {
         element.classList.add('hidden');
     });
-    const ownLessons = document.querySelectorAll('.eclesiastes');
+    const ownLessons = document.querySelectorAll('.lamentaciones');
     ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
@@ -87,14 +96,16 @@ function filtrarEclesiastes(evento) {
     document.getElementById('book-four').classList.remove('book-four-selected');
     document.getElementById('book-six').classList.remove('book-six-selected');
     document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
 }
-function filtrarCantares(evento) {
+function filtrarMarcos(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.deuteronomio, .juan, .job, .proverbios, .eclesiastes');
+    const lessons = document.querySelectorAll('.efesios, .filipenses, .habacuc, .jeremias, .lamentaciones, .ezequiel, .daniel');
     lessons.forEach(element => {
         element.classList.add('hidden');
     });
-    const ownLessons = document.querySelectorAll('.cantares');
+    const ownLessons = document.querySelectorAll('.marcos');
     ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
@@ -105,11 +116,17 @@ function filtrarCantares(evento) {
     document.getElementById('book-four').classList.remove('book-four-selected');
     document.getElementById('book-five').classList.remove('book-five-selected');
     document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
 }
-function showAll(evento) {
+function filtrarEzequiel(evento) {
     event.preventDefault();
-    const lessons = document.querySelectorAll('.hidden');
+    const lessons = document.querySelectorAll('.efesios, .filipenses, .habacuc, .jeremias, .lamentaciones, .marcos, .daniel');
     lessons.forEach(element => {
+        element.classList.add('hidden');
+    });
+    const ownLessons = document.querySelectorAll('.ezequiel');
+    ownLessons.forEach(element => {
         element.classList.remove('hidden');
     });
     document.getElementById('book-seven').classList.add('book-seven-selected');
@@ -119,4 +136,59 @@ function showAll(evento) {
     document.getElementById('book-four').classList.remove('book-four-selected');
     document.getElementById('book-five').classList.remove('book-five-selected');
     document.getElementById('book-six').classList.remove('book-six-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
+}
+function filtrarDaniel(evento) {
+    event.preventDefault();
+    const lessons = document.querySelectorAll('.efesios, .filipenses, .habacuc, .jeremias, .lamentaciones, .marcos, .ezequiel');
+    lessons.forEach(element => {
+        element.classList.add('hidden');
+    });
+    const ownLessons = document.querySelectorAll('.daniel');
+    ownLessons.forEach(element => {
+        element.classList.remove('hidden');
+    });
+    document.getElementById('book-eight').classList.add('book-eight-selected');
+    document.getElementById('book-one').classList.remove('book-one-selected');
+    document.getElementById('book-two').classList.remove('book-two-selected');
+    document.getElementById('book-three').classList.remove('book-three-selected');
+    document.getElementById('book-four').classList.remove('book-four-selected');
+    document.getElementById('book-five').classList.remove('book-five-selected');
+    document.getElementById('book-six').classList.remove('book-six-selected');
+    document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-nine').classList.remove('book-nine-selected');
+}
+function showAll(evento) {
+    event.preventDefault();
+    const lessons = document.querySelectorAll('.hidden');
+    lessons.forEach(element => {
+        element.classList.remove('hidden');
+    });
+    document.getElementById('book-nine').classList.add('book-nine-selected');
+    document.getElementById('book-one').classList.remove('book-one-selected');
+    document.getElementById('book-two').classList.remove('book-two-selected');
+    document.getElementById('book-three').classList.remove('book-three-selected');
+    document.getElementById('book-four').classList.remove('book-four-selected');
+    document.getElementById('book-five').classList.remove('book-five-selected');
+    document.getElementById('book-six').classList.remove('book-six-selected');
+    document.getElementById('book-seven').classList.remove('book-seven-selected');
+    document.getElementById('book-eight').classList.remove('book-eight-selected');
+}
+/*************************************************************************** */
+function searchClassByDate(){
+    const lessonDate = document.getElementById('dateControl').value;
+    if(lessonDate === null){
+        alert('Seleccione una fecha');
+    }else{
+        var lessonsDates = document.querySelectorAll('.lesson-date');
+        var lessonsNumbers = document.querySelectorAll('.lesson-number');
+        for (let index = 0; index < lessonsNumbers.length; index++) {
+            if(lessonsDates[index].innerHTML == String(lessonDate)){
+                console.log(lessonsDates[index].innerHTML);
+                console.log(lessonsNumbers[index].innerHTML);
+                window.location.href = `/lessons/lesson${lessonsNumbers[index].innerHTML}.html`
+            }
+        }
+    }
 }

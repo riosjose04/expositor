@@ -1,542 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/index.css">
-    <link rel="stylesheet" href="src/styles/mobile.css">
-
+    <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <title>Expositor Biblico | La Bíblia libro por libro</title>
     <script src="index.js"></script>
+    <title>Expositor Biblico | La Bíblia libro por libro</title>
 </head>
+
 <body>
     <img id="template" src="resources/template.jpg" alt="">
     <div id="sidebar">
-        <div id="book-info"><div id="book-edition">7°</div>&nbsp;EXPOSITOR</div>
+        <div id="book-info">
+            <div id="book-edition">8°</div>&nbsp;EXPOSITOR
+        </div>
         <br>
         <hr>
         <div>
             <h1>LIBROS</h1>
-            <a class="menu-option" id="book-one" onclick="filtrarDeuteronomio()">Deuteronomio</a>
-            <a class="menu-option" id="book-two" onclick="filtrarJuan()">Juan</a>
-            <a class="menu-option" id="book-three" onclick="filtrarJob()">Job</a>
-            <a class="menu-option" id="book-four" onclick="filtrarProverbios()">Proverbios</a>
-            <a class="menu-option" id="book-five" onclick="filtrarEclesiastes()">Eclesiastés</a>
-            <a class="menu-option" id="book-six" onclick="filtrarCantares()">Cantares</a>
-            <a class="menu-option book-seven-selected" id="book-seven" onclick="showAll()">Ver todo</a>            
+            <a class="menu-option" id="book-one" onclick="filtrarEfesios()">Efesios</a>
+            <a class="menu-option" id="book-two" onclick="filtrarFilipenses()">Filipenses</a>
+            <a class="menu-option" id="book-three" onclick="filtrarHabacuc()">Habacuc</a>
+            <a class="menu-option" id="book-four" onclick="filtrarJeremias()">Jeremías</a>
+            <a class="menu-option" id="book-five" onclick="filtrarLamentaciones()">Lamentaciones</a>
+            <a class="menu-option" id="book-six" onclick="filtrarMarcos()">Marcos</a>
+            <a class="menu-option" id="book-seven" onclick="filtrarEzequiel()">Ezequiel</a>
+            <a class="menu-option" id="book-eight" onclick="filtrarDaniel()">Daniel</a>
+            <a class="menu-option book-nine-selected" id="book-nine" onclick="showAll()">Ver todo</a>
             <h1>CRONOGRAMA</h1>
             <a class="menu-option" href="">Ver Calendario</a>
+            <div>
+                <input type="date" name="Fecha" id="dateControl" value="2023-03-19" step="7" min="2023-03-19"
+                    max="2024-02-25">
+                <input type="button" id="search-button" value="Buscar" onclick="searchClassByDate()">
+            </div>
         </div>
     </div>
     <section id="header" class="left-space">
         <h1 id="welcome">Hola, Bienvenido <img id="wink-emoji" src="resources/emoji.png" alt="wink"></h1>
-        <p class="header-label">Expositor bíblico 7: La biblia libro por libro</p>
+        <p class="header-label">Expositor bíblico 8: La biblia libro por libro</p>
     </section>
     <section id="classes" class="left-space">
-        <a class="deuteronomio" href="lessons/lesson1.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson1">1</div>
-                <h1 class="lesson-name">La fidelidad de Dios</h1>
-                <p class="lesson-date">27 marzo 2023</p>
-                <p class="lesson-verse">Deuteronomio 1:1-25</p>
-                <p class="lesson-description">Dios demuestra su fidelidad entregando a su pueblo la tierra que les había prometido.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson1.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson1">1</div>
+                <h1 class="lesson-name">Una vida de santidad</h1>
+                <p class="lesson-date">2023-03-19</p>
+                <p class="lesson-verse">Efesios 1:1-23</p>
+                <p class="lesson-description">Dios escogió a su pueblo, la iglesia, desde antes de la fundación del
+                    mundo para que viviera en santidad y sin mancha delante de él. La santidad, pues, es una
+                    característica esencial de la iglesia cristiana.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lessons/lesson2.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson2">2</div>
-                <h1 class="lesson-name">La infidelidad del pueblo</h1>
-                <p class="lesson-date">03 abril 2022</p>
-                <p class="lesson-verse">Deuteronomio 1:26 a 2:37</p>
-                <p class="lesson-description">El pueblo de Dios demostró su infidelidad al no creer en las promesas divinas.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson2.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson2">2</div>
+                <h1 class="lesson-name">Una vida de servicio</h1>
+                <p class="lesson-date">2023-03-26</p>
+                <p class="lesson-verse">Efesios 2:1-22</p>
+                <p class="lesson-description">Nuestra vida sin Cristo se caracterizaba por ser estéril, pero cuando el
+                    Señor nos salvó también preparó buenas obras para que anduviésemos en ellas. De esa manera podemos
+                    vivir una vida de servicio fructífero en su nombre.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lessons/lesson3.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson3">3</div>
-                <h1 class="lesson-name">Las victorias son de Dios</h1>
-                <p class="lesson-date">10 abril 2022</p>
-                <p class="lesson-verse">Deuteronomio 3:1 a 4:49</p>
-                <p class="lesson-description">Moisés y el pueblo comienzan a disfrutar de las primeras victorias porque Dios intervino con amor y poder.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson3.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson3">3</div>
+                <h1 class="lesson-name">Una vida de poder espiritual</h1>
+                <p class="lesson-date">2023-04-02</p>
+                <p class="lesson-verse">Efesios 3:1-21</p>
+                <p class="lesson-description">Una de las características sobresalientes de la nueva vida en Cristo es
+                    que Dios, por su Espíritu, fortalece con poder al creyente en su ser interno y lo hace apto para
+                    comprender las dimensiones del amor de Cristo.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson4.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson4">4</div>
-                <h1 class="lesson-name">El gran mandamiento</h1>
-                <p class="lesson-date">17 abril 2022</p>
-                <p class="lesson-verse">Deuteronomio 5:1 a 6:19</p>
-                <p class="lesson-description">Para que Dios se manifieste en la vida del hombre y derrame bendiciones sobre la nación, es necesario considerar las demandas de Jehová en obediencia y adoración exclusiva.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson4.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson4">4</div>
+                <h1 class="lesson-name">La nueva vida en Cristo</h1>
+                <p class="lesson-date">2023-04-09</p>
+                <p class="lesson-verse">Efesios 4:1-16</p>
+                <p class="lesson-description">En la gran tarea de la iglesia de proclamar las buenas nuevas de
+                    salvación, la unidad, los dones y el crecimiento van íntimamente ligados.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson5.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson5">5</div>
-                <h1 class="lesson-name">Resultado de la obediencia</h1>
-                <p class="lesson-date">24 abril 2022</p>
-                <p class="lesson-verse">Deuteronomio 6:20 a 8:20</p>
-                <p class="lesson-description">Dios como Padre amante que nos ha reconocido como hijos, corrige nuestras desobediencias pero también nos recompensa cuando en obediencia andamos por su camino.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson5.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson5">5</div>
+                <h1 class="lesson-name">Una mente renovada</h1>
+                <p class="lesson-date">2023-04-16</p>
+                <p class="lesson-verse">Efesios 4:17-32</p>
+                <p class="lesson-description">Hay un contraste muy marcado entre la antigua manera de vivir y la nueva
+                    vida en Cristo. Antes andábamos en la vanidad de nuestra mente ahora el poder de Dios actuando en
+                    nosotros ha renovado nuestra manera de pensar.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson6.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson6">6</div>
-                <h1 class="lesson-name">Dónde y cómo adorar a Dios</h1>
-                <p class="lesson-date">01 mayo 2022</p>
-                <p class="lesson-verse">Deuteronomio 9:1 a 12:32</p>
-                <p class="lesson-description">Dios demanda un lugar único y adecuado para que su pueblo le rinda sincera y ferviente adoración.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson6.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson6">6</div>
+                <h1 class="lesson-name">Una vida llena del Espíritu</h1>
+                <p class="lesson-date">2023-04-23</p>
+                <p class="lesson-verse">Efesios 5:1-20</p>
+                <p class="lesson-description">El estímulo para vivir la nueva vida en Cristo no viene de cosas externas,
+                    como las bebidas embriagantes, sino de permitir que el Espíritu Santo tome posesión de todo nuestro
+                    corazón. A eso le llamamos una vida llena del Espíritu.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson7.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson7">7</div>
-                <h1 class="lesson-name">Normas de vida para un pueblo santo</h1>
-                <p class="lesson-date">08 mayo 2022</p>
-                <p class="lesson-verse">Deuteronomio 13:1 a 14:29</p>
-                <p class="lesson-description">El pueblo de Dios ha sido llamado para ser un pueblo santo y para cumplir un propósito especial en el mundo. Para cumplir su misión debe obedecer las normas que Dios ha establecido.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson7.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson7">7</div>
+                <h1 class="lesson-name">Una vida de sumisión</h1>
+                <p class="lesson-date">2023-04-30</p>
+                <p class="lesson-verse">Efesios 5:21 a 6:9</p>
+                <p class="lesson-description">El éxito en las relaciones familiares radica en someterse unos a otros en
+                    el temor del Señor, en el amor de los cónyuges entre sí y en la obediencia de los hijos.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson8.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson8">8</div>
-                <h1 class="lesson-name">Normas para elegir líderes</h1>
-                <p class="lesson-date">15 mayo 2022</p>
-                <p class="lesson-verse">Deuteronomio 15:1 a 17:20</p>
-                <p class="lesson-description">Dios escoge a los lideres que deben dar dirección a su pueblo y guiarles con justicia y rectitud.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="efesios" href="lessons/lesson8.html">
+            <div class="card box-efesios">
+                <div class="lesson-number lblefesios" id="lesson8">8</div>
+                <h1 class="lesson-name">Una vida fortalecida</h1>
+                <p class="lesson-date">2023-05-07</p>
+                <p class="lesson-verse">Efesios 6:10-24</p>
+                <p class="lesson-description">Los seguidores de Cristo tenemos una lucha contra el diablo que busca por
+                    todos los medios posibles apartarnos del camino recto. Por lo mismo, necesitamos fortalecernos en el
+                    Señor para la victoria en esa lucha espiritual.</p>
+                <div class="book-label lblefesios">EFE</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson9.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson9">9</div>
-                <h1 class="lesson-name">Normas para los líderes religiosos</h1>
-                <p class="lesson-date">22 mayo 2022</p>
-                <p class="lesson-verse">Deuteronomio 18 a 22:12</p>
-                <p class="lesson-description">Los líderes elegidos por Dios para servir en medio de su pueblo, deben ser reconocidos por aquellos a quienes sirven con un sustento digno que responda adecuadamente a todas sus necesidades.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="filipenses" href="lessons/lesson9.html">
+            <div class="card box-filipenses">
+                <div class="lesson-number lblfilipenses" id="lesson9">9</div>
+                <h1 class="lesson-name">Unidos por la fe del evangelio</h1>
+                <p class="lesson-date">2023-05-14</p>
+                <p class="lesson-verse">Filipenses 1:1-30</p>
+                <p class="lesson-description">Verdad central: El testimonio de Pablo acerca de la iglesia de Filipos nos
+                    compromete a unirnos en un mismo espíritu para combatir por la fe del evangelio.</p>
+                <div class="book-label lblfilipenses">FLP</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson10.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson10">10</div>
-                <h1 class="lesson-name">Normas para la buena vecindad</h1>
-                <p class="lesson-date">29 mayo 2022</p>
-                <p class="lesson-verse">Deuteronomio 22:13 a 25:16</p>
-                <p class="lesson-description">Dios exige de su pueblo una conducta digna. Sus leyes y amonestaciones tienen como finalidad la buena vecindad entre los hombres y la complacencia de Dios sobre su pueblo.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="filipenses" href="lessons/lesson10.html">
+            <div class="card box-filipenses">
+                <div class="lesson-number lblfilipenses" id="lesson10">10</div>
+                <h1 class="lesson-name">Unidos, sintiendo una misma cosa</h1>
+                <p class="lesson-date">2023-05-21</p>
+                <p class="lesson-verse">Filipenses 2:1-30</p>
+                <p class="lesson-description">Sentir una misma cosa como miembros del cuerpo de Cristo es una evidencia
+                    de que los miembros de la iglesia están sometiendo su vida a la soberanía de Dios.</p>
+                <div class="book-label lblfilipenses">FLP</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson11.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson11">11</div>
-                <h1 class="lesson-name">Primicias y diezmos</h1>
-                <p class="lesson-date">05 junio 2022</p>
-                <p class="lesson-verse">Deuteronomio 25:17 a 28:68</p>
-                <p class="lesson-description">Adorar a Dios con los diezmos y las primicias, sin olvidarnos de nuestro prójimo, es el estilo de vida que Dios exige de su pueblo.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="filipenses" href="lessons/lesson11.html">
+            <div class="card box-filipenses">
+                <div class="lesson-number lblfilipenses" id="lesson11">11</div>
+                <h1 class="lesson-name">Unidos hacia la meta</h1>
+                <p class="lesson-date">2023-05-28</p>
+                <p class="lesson-verse">Filipenses 3:1-16</p>
+                <p class="lesson-description">La madurez del cuerpo de Cristo se manifiesta en la unidad de sus miembros
+                    que avanzan decididamente hacia la meta del llamamiento de Dios.</p>
+                <div class="book-label lblfilipenses">FLP</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson12.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson12">12</div>
-                <h1 class="lesson-name">Arrepentimiento y restauración</h1>
-                <p class="lesson-date">12 junio 2022</p>
-                <p class="lesson-verse">Deuteronomio 29:1 a 31:29</p>
-                <p class="lesson-description">Para el adorador arrepentido Dios promete restauración completa y nueva vida en comunión con él.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="filipenses" href="lessons/lesson12.html">
+            <div class="card box-filipenses">
+                <div class="lesson-number lblfilipenses" id="lesson12">12</div>
+                <h1 class="lesson-name">Unidos con firmeza</h1>
+                <p class="lesson-date">2023-06-04</p>
+                <p class="lesson-verse">Filipenses 3:17 a 4:9</p>
+                <p class="lesson-description">Aunque somos ciudadanos de los cielos, estamos expuestos a divergencias,
+                    falsas enseñanzas y ejemplos indignos. Nuestra responsabilidad es permanecer firmes, unidos contra
+                    los enemigos de la cruz de Cristo.</p>
+                <div class="book-label lblfilipenses">FLP</div>
             </div>
         </a>
-        <a class="deuteronomio" href="lesson/lesson13.html">
-            <div class="card box-deuteronomio" >
-                <div class="lesson-number lbldeuteronomio" id="lesson13">13</div>
-                <h1 class="lesson-name">Moisés: un estilo de vida fiel a su Dios</h1>
-                <p class="lesson-date">19 junio 2022</p>
-                <p class="lesson-verse">Deuteronomio 32:1 a 34:12</p>
-                <p class="lesson-description">Dios honra a sus siervos fieles y les reconoce sus méritos a pesar de sus fallas humanas.</p>
-                <div class="book-label lbldeuteronomio">DEUT</div>
+        <a class="filipenses" href="lessons/lesson13.html">
+            <div class="card box-filipenses">
+                <div class="lesson-number lblfilipenses" id="lesson13">13</div>
+                <h1 class="lesson-name">Unidos apoyando la obra</h1>
+                <p class="lesson-date">2023-06-11</p>
+                <p class="lesson-verse">Filipenses 4:10-23</p>
+                <p class="lesson-description">La colaboración de la iglesia de Filipos para llevar adelante la obra
+                    misionera es un ejemplo digno de imitar por nuestras iglesias en la actualidad.</p>
+                <div class="book-label lblfilipenses">FLP</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson14.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson14">14</div>
-                <h1 class="lesson-name">El verbo se hizo carne</h1>
-                <p class="lesson-date">26 junio 2022</p>
-                <p class="lesson-verse">Juan 1:1-18</p>
-                <p class="lesson-description">Dios se hizo hombre en la persona de Jesús para cumplir así su promesa de un Mesías que vendrían para salvar al hombre de sus pecados.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="habacuc" href="lessons/lesson14.html">
+            <div class="card box-habacuc">
+                <div class="lesson-number lblhabacuc" id="lesson14">14</div>
+                <h1 class="lesson-name">Fidelidad, a pesar de todo</h1>
+                <p class="lesson-date">2023-06-18</p>
+                <p class="lesson-verse">Habacuc 1:1 a 3:19</p>
+                <p class="lesson-description">El juicio de Dios a su pueblo por medio de los caldeos nos enseña que él
+                    castiga la infidelidad, y que nos conviene ser fieles en todas circunstancias.</p>
+                <div class="book-label lblhabacuc">HAB</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson15.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson15">15</div>
-                <h1 class="lesson-name">Juan testifica de Jesús</h1>
-                <p class="lesson-date">03 julio 2022</p>
-                <p class="lesson-verse">Juan 1:19-51</p>
-                <p class="lesson-description">Juan el Bautista dio testimonio de que Jesús era el Mesías prometido por Dios, cuando se refirió a él como “el Cordero de Dios que quita el pecado del mundo”.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson15.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson15">15</div>
+                <h1 class="lesson-name">Jeremías, vocero de destrucción</h1>
+                <p class="lesson-date">2023-06-25</p>
+                <p class="lesson-verse">Jeremías 1:1 a 6:30</p>
+                <p class="lesson-description">Verdad central: La comisión de Dios a Jeremías para que anuncie el juicio
+                    divino contra su pueblo que cayó en el pecado de la idolatría nos enseña la importancia de adorarle
+                    únicamente a él.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson16.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson16">16</div>
-                <h1 class="lesson-name">Jesús inicia su ministerio público</h1>
-                <p class="lesson-date">10 julio 2022</p>
-                <p class="lesson-verse">Juan 2:1-25</p>
-                <p class="lesson-description">Jesús inició su ministerio público con un milagro con el que demostró su gloria y su poder, éste enseñó a sus discípulos a crecer en él como enviado de Dios.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson16.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson16">16</div>
+                <h1 class="lesson-name">Una confianza mal puesta</h1>
+                <p class="lesson-date">2023-07-02</p>
+                <p class="lesson-verse">Jeremías 7 a 10</p>
+                <p class="lesson-description">Jeremías pone en evidencia la confianza que el pueblo de Dios depositó en
+                    el templo, y lo llama a vivir de acuerdo con su vocación de pueblo escogido.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson17.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson17">17</div>
-                <h1 class="lesson-name">Es necesario nacer otra vez</h1>
-                <p class="lesson-date">17 julio 2022</p>
-                <p class="lesson-verse">Juan 3:1-36</p>
-                <p class="lesson-description">En su entrevista con Nicodemo, Jesús declara la importancia y la naturaleza del nuevo nacimiento.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson17.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson17">17</div>
+                <h1 class="lesson-name">Llamado a la humillación</h1>
+                <p class="lesson-date">2023-07-09</p>
+                <p class="lesson-verse">Jeremías 11:1 a 13:27</p>
+                <p class="lesson-description">La soberbia del pueblo provoca la tristeza de Dios y estorba el
+                    cumplimiento del plan redentor.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson18.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson18">18</div>
-                <h1 class="lesson-name">Jesús, el agua de vida</h1>
-                <p class="lesson-date">24 julio 2022</p>
-                <p class="lesson-verse">Juan 4:1-42</p>
-                <p class="lesson-description">Jesús en su entrevista con la mujer samaritana declaró ser el agua de vida, significando que él quiere y puede satisfacer las necesidades de quienes lo buscan solicitando su ayuda.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson18.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson18">18</div>
+                <h1 class="lesson-name">El corazón engañoso</h1>
+                <p class="lesson-date">2023-07-16</p>
+                <p class="lesson-verse">Jeremías 14 a 17</p>
+                <p class="lesson-description">Dios examina el corazón del hombre y le retribuye conforme a sus obras.
+                </p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson19.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson19">19</div>
-                <h1 class="lesson-name">Señales de la divinidad de Jesús</h1>
-                <p class="lesson-date">31 julio 2022</p>
-                <p class="lesson-verse">Juan 4:43 a 5:18</p>
-                <p class="lesson-description">Muchos de los que seguían a Jesús esperaban ver señales de su divinidad para creer en él.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson19.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson19">19</div>
+                <h1 class="lesson-name">En la casa del alfarero</h1>
+                <p class="lesson-date">2023-07-23</p>
+                <p class="lesson-verse">Jeremías 18 a 20</p>
+                <p class="lesson-description">La figura del vaso de barro y el alfarero nos enseña que Dios puede
+                    restaurar la vida de una persona o un pueblo, que haya sido dañada y transformarla en algo útil.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson20.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson20">20</div>
-                <h1 class="lesson-name">La autoridad de Jesús</h1>
-                <p class="lesson-date">07 agosto 2022</p>
-                <p class="lesson-verse">Juan 5:19-47</p>
-                <p class="lesson-description">La relación de Jesús con el Padre es única, el Hijo no trabaja independientemente del Padre sino que recibe de él tanto la tarea como la autoridad para realizarla.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson20.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson20">20</div>
+                <h1 class="lesson-name">Profetas buenos y profetas malos</h1>
+                <p class="lesson-date">2023-07-30</p>
+                <p class="lesson-verse">Jeremías 21 a 26</p>
+                <p class="lesson-description">En el pueblo del Señor hay siervos responsables y los hay irresponsables,
+                    pero en toda circunstancia Dios promete tratar a su pueblo con amor y misericordia.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson21.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson21">21</div>
-                <h1 class="lesson-name">Jesús, el pan de vida</h1>
-                <p class="lesson-date">14 agosto 2022</p>
-                <p class="lesson-verse">Juan 6:1-71</p>
-                <p class="lesson-description">"Verdad central: Solamente Dios puede dar el verdadero pan del cielo. Al declararse Jesús como el pan de vida está señalando que él es el ver dadero pan de vida porque ""desciende del cielo""."</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson21.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson21">21</div>
+                <h1 class="lesson-name">Una carta de consuelo</h1>
+                <p class="lesson-date">2023-08-06</p>
+                <p class="lesson-verse">Jeremías 27:1 a 31:26</p>
+                <p class="lesson-description">La obediencia a la voluntad de Dios puede traemos sufrimientos físicos y
+                    desesperación emocional, pero seamos fieles a pesar de todo.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson22.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson22">22</div>
-                <h1 class="lesson-name">Jesús enfrenta la oposición</h1>
-                <p class="lesson-date">21 agosto 2022</p>
-                <p class="lesson-verse">Juan 7:1-52</p>
-                <p class="lesson-description">Jesús enfrentó abierta oposición en el desempeño de su ministerio y, sin embargo, siguió adelante con la firme determinación de cumplir su obra de redención.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson22.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson22">22</div>
+                <h1 class="lesson-name">Un pacto nuevo</h1>
+                <p class="lesson-date">2023-08-13</p>
+                <p class="lesson-verse">Jeremías 31:27 a 35</p>
+                <p class="lesson-description">Dios prepara a su pueblo para la venida del Mesías y la implementación del
+                    nuevo pacto entre el ser humano y Dios, por medio de Cristo.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson23.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson23">23</div>
-                <h1 class="lesson-name">Jesús testifica de sí mismo</h1>
-                <p class="lesson-date">28 agosto 2022</p>
-                <p class="lesson-verse">Juan 8:1-59</p>
-                <p class="lesson-description">Según la ley antigua, un testimonio no era válido si no procedía de dos o tres personas. Jesús, al dar testimonio de sí mismo, declaró que su testimonio era válido puesto que el Padre también testificaba de él.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson23.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson23">23</div>
+                <h1 class="lesson-name">La caída de Jerusalén</h1>
+                <p class="lesson-date">2023-08-20</p>
+                <p class="lesson-verse">Jeremías 36 a 39</p>
+                <p class="lesson-description">La caída de Jerusalén bajo Babilonia y la promesa de restauración nos
+                    enseñan que Dios castiga el pecado, pero siempre está dispuesto para restaurar a sus hijos.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson24.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson24">24</div>
-                <h1 class="lesson-name">Jesús causa controversia</h1>
-                <p class="lesson-date">04 septiembre 2022</p>
-                <p class="lesson-verse">Juan 9:1-41</p>
-                <p class="lesson-description">"Cuando Cristo resucitó a su amigo Lázaro, demostró su poder aun sobre la muerte y dejó la incomparable promesa que el que cree en él ""aunque muera, vivirá""."</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson24.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson24">24</div>
+                <h1 class="lesson-name">El remanente de Judá</h1>
+                <p class="lesson-date">2023-08-27</p>
+                <p class="lesson-verse">Jeremías 40 a 42</p>
+                <p class="lesson-description">La exhortación de Jeremías al remanente de Judá de ser obedientes a Dios
+                    tiene la intención de preservar ese remanente y llevar adelante su plan de restauración.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson25.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson25">25</div>
-                <h1 class="lesson-name">Jesús es el Cristo</h1>
-                <p class="lesson-date">11 septiembre 2022</p>
-                <p class="lesson-verse">Juan 10:1-42</p>
-                <p class="lesson-description">Jesús declaró abiertamente que él era el Cristo, el Hijo de Dios, por lo cual los judíos le rechazaron.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="jeremias" href="lessons/lesson25.html">
+            <div class="card box-jeremias">
+                <div class="lesson-number lbljeremias" id="lesson25">25</div>
+                <h1 class="lesson-name">El remanente en Egipto</h1>
+                <p class="lesson-date">2023-09-03</p>
+                <p class="lesson-verse">Jeremías 43 a 52</p>
+                <p class="lesson-description">En abierta desobediencia al plan de Dios los judíos decidieron buscar la
+                    seguridad en Egipto poniendo en peligro la subsistencia del remanente.</p>
+                <div class="book-label lbljeremias">JER</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson26.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson26">26</div>
-                <h1 class="lesson-name">Victorioso sobre la muerte</h1>
-                <p class="lesson-date">18 septiembre 2022</p>
-                <p class="lesson-verse">Juan 11:1-44</p>
-                <p class="lesson-description">"Cuando Cristo resucitó a su amigo Lázaro, demostró su poder aun sobre la muerte y dejó la incomparable promesa que el que cree en él ""aunque muera, vivirá""."</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="lamentaciones" href="lessons/lesson26.html">
+            <div class="card box-lamentaciones">
+                <div class="lesson-number lbllamentaciones" id="lesson26">26</div>
+                <h1 class="lesson-name">El dolor de una pérdida irrecuperable</h1>
+                <p class="lesson-date">2023-09-10</p>
+                <p class="lesson-verse">Lamentaciones 1 a 5</p>
+                <p class="lesson-description">Las pérdidas nos causan dolor, pero tenemos una fuente de consuelo en
+                    Dios, y sus promesas de sostenernos en las pruebas.</p>
+                <div class="book-label lbllamentaciones">LAM</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson27.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson27">27</div>
-                <h1 class="lesson-name">Acuerdo para matar a Jesús</h1>
-                <p class="lesson-date">25 septiembre 2022</p>
-                <p class="lesson-verse">Juan 11:45 a 12:11</p>
-                <p class="lesson-description">Sin tener mayor acusación que las señales hechas por Jesús, los religiosos de su tiempo tomaron acuerdo para matarle.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson27.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson27">27</div>
+                <h1 class="lesson-name">El evangelio de Jesucristo</h1>
+                <p class="lesson-date">2023-09-17</p>
+                <p class="lesson-verse">Marcos 1:1-13</p>
+                <p class="lesson-description">El relato de Marcos acerca del inicio del ministerio de Jesús muestra que
+                    el Hijo de Dios es el principio del evangelio.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson28.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson28">28</div>
+        <a class="marcos" href="lessons/lesson28.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson28">28</div>
                 <h1 class="lesson-name">Jesús confronta la incredulidad</h1>
-                <p class="lesson-date">02 octubre 2022</p>
-                <p class="lesson-verse">Juan 12:12-50</p>
-                <p class="lesson-description">Ante la incredulidad de muchos de sus oyentes, Jesús aclara que la misma palabra que han rechazado será la que les juzgue en el día final.</p>
-                <div class="book-label lbljuan">JUAN</div>
+                <p class="lesson-date">2023-09-24</p>
+                <p class="lesson-verse">Marcos 1:14-45</p>
+                <p class="lesson-description">La cercanía del reino de Dios exige que el hombre se arrepienta y crea en
+                    el evangelio.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson29.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson29">29</div>
-                <h1 class="lesson-name">Jesús anuncia la traición de Judas</h1>
-                <p class="lesson-date">09 octubre 2022</p>
-                <p class="lesson-verse">Juan 13:1-35</p>
-                <p class="lesson-description">En la ocasión cuando Jesús lavó los pies a sus discípulos, anunció públicamente que sería víctima de la traición de uno de sus más cercanos seguidores.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson29.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson29">29</div>
+                <h1 class="lesson-name">Jesús valora a las personas</h1>
+                <p class="lesson-date">2023-10-01</p>
+                <p class="lesson-verse">Marcos 2:1 a 3:6</p>
+                <p class="lesson-description">Para Jesús las personas son más importantes que las instituciones de
+                    carácter legalista.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson30.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson30">30</div>
-                <h1 class="lesson-name">Jesús, el camino al Padre</h1>
-                <p class="lesson-date">16 octubre 2022</p>
-                <p class="lesson-verse">Juan 13:36 a 14:14</p>
-                <p class="lesson-description">En una declaración sin precedentes, Jesús afirma que él y sólo él es el camino, la verdad y la vida. Jesús es el único salvador que reconcilia al pecador con Dios.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson30.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson30">30</div>
+                <h1 class="lesson-name">Jesús principia su ministerio</h1>
+                <p class="lesson-date">2023-10-08</p>
+                <p class="lesson-verse">Marcos 3:7 a 4:34</p>
+                <p class="lesson-description">La parábola del sembrador nos enseña que la exposición de la Palabra de
+                    Dios requiere una mente y un corazón dispuestos a actuar de conformidad con la Palabra sembrada.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson31.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson31">31</div>
-                <h1 class="lesson-name">Jesús promete enviar al Consolador</h1>
-                <p class="lesson-date">23 octubre 2022</p>
-                <p class="lesson-verse">Juan 14:15-31</p>
-                <p class="lesson-description">Al volver a la gloria, que le pertenece, Jesús hizo la promesa de rogar al Padre que enviara otro Consolador asegurándoles así a los suyos que no les dejaría huérfanos.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson31.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson31">31</div>
+                <h1 class="lesson-name">Jesús usa su poder</h1>
+                <p class="lesson-date">2023-10-15</p>
+                <p class="lesson-verse">Marcos 4:35 a 5:43</p>
+                <p class="lesson-description">Jesús demostró su poder controlando las fuerzas de la naturaleza.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson32.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson32">32</div>
-                <h1 class="lesson-name">Jesús, la vid verdadera</h1>
-                <p class="lesson-date">30 octubre 2022</p>
-                <p class="lesson-verse">Juan 15:1 a 16:24</p>
-                <p class="lesson-description">El cristiano que está en una relación personal íntima y permanente con Jesús, tendrá una vida fructífera en el servicio a su Señor.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson32.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson32">32</div>
+                <h1 class="lesson-name">Jesús, su ministerio a los enfermos</h1>
+                <p class="lesson-date">2023-10-22</p>
+                <p class="lesson-verse">Marcos 6:1-56</p>
+                <p class="lesson-description">Jesús demostró su poder respondiendo a las necesidades de las personas
+                    enfermas en situaciones tanto de incredulidad como de fe.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson33.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson33">33</div>
-                <h1 class="lesson-name">Jesús ora por sus discípulos</h1>
-                <p class="lesson-date">06 noviembre 2022</p>
-                <p class="lesson-verse">Juan 16:25 a 17:26</p>
-                <p class="lesson-description">Jesús oró por sus discípulos, y esto nos asegura su interés y apoyo para el bienestar de sus seguidores mientras cumplen en el mundo la tarea que les asignó.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson33.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson33">33</div>
+                <h1 class="lesson-name">Jesús escucha los ruegos de los necesitados</h1>
+                <p class="lesson-date">2023-10-29</p>
+                <p class="lesson-verse">Marcos 7:1-37</p>
+                <p class="lesson-description">Jesús responde a los ruegos de los necesitados cuando se acercan a él con
+                    fe.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson34.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson34">34</div>
-                <h1 class="lesson-name">Jesús es arrestado</h1>
-                <p class="lesson-date">13 noviembre 2022</p>
-                <p class="lesson-verse">Juan 18:1-41</p>
-                <p class="lesson-description">Cuando Jesús fue arrestado por un grupo de soldados dirigidos por Judas Iscariote se cumplió lo que él ya había anunciado que sucedería.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson34.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson34">34</div>
+                <h1 class="lesson-name">Jesús ministra a sus discípulos</h1>
+                <p class="lesson-date">2023-11-05</p>
+                <p class="lesson-verse">Marcos 8:1-38</p>
+                <p class="lesson-description">Los discípulos de Jesús necesitaban reafirmar su fe y fueron ministrados
+                    amorosamente por el Señor para satisfacer esa necesidad.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson35.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson35">35</div>
-                <h1 class="lesson-name">Jesús es negado por Pedro</h1>
-                <p class="lesson-date">20 noviembre 2022</p>
-                <p class="lesson-verse">Juan 18:15-27</p>
-                <p class="lesson-description">La negación de Pedro acerca de su relación con Jesús muestra la vulnerabilidad humana.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson35.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson35">35</div>
+                <h1 class="lesson-name">Jesús responde a la fe de los padres</h1>
+                <p class="lesson-date">2023-11-12</p>
+                <p class="lesson-verse">Marcos 9:1 a 10:16</p>
+                <p class="lesson-description">En diversas oportunidades Jesús ministró a hijos cuyos padres los
+                    presentaron a él para que los bendijera y los sanara.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson36.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson36">36</div>
-                <h1 class="lesson-name">La crucifixión de Jesús</h1>
-                <p class="lesson-date">27 noviembre 2022</p>
-                <p class="lesson-verse">Juan 18:28 a 19:27</p>
-                <p class="lesson-description">La crucifixión de Jesús es el evento que culmina la historia de la salvación del hombre, es en la cruz del Calvario que Dios mostró su amor entregando a su Hijo.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson36.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson36">36</div>
+                <h1 class="lesson-name">El camino del siervo</h1>
+                <p class="lesson-date">2023-11-19</p>
+                <p class="lesson-verse">Marcos 10:17-52</p>
+                <p class="lesson-description">Lo que Jesús hizo durante su vida, y su muerte misma en la cruz,
+                    demuestran que vino a darse en servicio completo a la humanidad.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson37.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson37">37</div>
-                <h1 class="lesson-name">Jesús consuma su tarea</h1>
-                <p class="lesson-date">04 diciembre 2022</p>
-                <p class="lesson-verse">Juan 19:28-42</p>
-                <p class="lesson-description">Habiendo pasado por todas las dificultades que implicó su arresto y su juicio, Jesús fue llevado a la cruz donde consumó la obra de salvación a favor de los pecadores.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson37.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson37">37</div>
+                <h1 class="lesson-name">Jesús confrontado en Jerusalén</h1>
+                <p class="lesson-date">2023-11-26</p>
+                <p class="lesson-verse">Marcos 11:1 a 12:44</p>
+                <p class="lesson-description">Jesús fue confrontado por sus enemigos en Jerusalén con la intención de
+                    tenderle una trampa, pero él contestó con audacia e inteligencia.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson38.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson38">38</div>
-                <h1 class="lesson-name">Jesús resucita victorioso</h1>
-                <p class="lesson-date">11 diciembre 2022</p>
-                <p class="lesson-verse">Juan 20:1-31</p>
-                <p class="lesson-description">La actitud de los discípulos revela que no estaban muy seguros de que Jesús se levantaría de entre los muertos, pero el Cristo resucitado les confirmó su victoria sobre la muerte.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson38.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson38">38</div>
+                <h1 class="lesson-name">Jesús a la sombra de la cruz</h1>
+                <p class="lesson-date">2023-12-03</p>
+                <p class="lesson-verse">Marcos 13:1 a 14:72</p>
+                <p class="lesson-description">Jesús estuvo dispuesto a morir en la cruz demostrando su amor por los
+                    hombres y su obediencia y aceptación de la voluntad del padre.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="juan" href="lesson/lesson39.html">
-            <div class="card box-juan" >
-                <div class="lesson-number lbljuan" id="lesson39">39</div>
-                <h1 class="lesson-name">Sígueme tú</h1>
-                <p class="lesson-date">18 diciembre 2022</p>
-                <p class="lesson-verse">Juan 21:1-25</p>
-                <p class="lesson-description">Al final de su ministerio terrenal, Jesús confirmó a Pedro y Juan su autoridad y soberanía como el victorioso Hijo de Dios.</p>
-                <div class="book-label lbljuan">JUAN</div>
+        <a class="marcos" href="lessons/lesson39.html">
+            <div class="card box-marcos">
+                <div class="lesson-number lblmarcos" id="lesson39">39</div>
+                <h1 class="lesson-name">Jesús crucificado y resucitado</h1>
+                <p class="lesson-date">2023-12-10</p>
+                <p class="lesson-verse">Marcos 15:1 a 16:20</p>
+                <p class="lesson-description">Jesús murió como siervo sufriente, pero resucitó como evidencia de que es
+                    el Hijo de Dios.</p>
+                <div class="book-label lblmarcos">MRC</div>
             </div>
         </a>
-        <a class="job" href="lesson/lesson40.html">
-            <div class="card box-job" >
-                <div class="lesson-number lbljob" id="lesson40">40</div>
-                <h1 class="lesson-name">Dios, SatanáS y Job</h1>
-                <p class="lesson-date">25 diciembre 2022</p>
-                <p class="lesson-verse">Job 1:1-22</p>
-                <p class="lesson-description">Verdad central: Dios, que es soberano, tiene un plan perfecto para la vida de cada persona. En su sabiduría infinita permite el sufrimiento, a la vez que aplica su poderoso cuidado a quien está pasando por las circunstancias más adversas, y las transforma en bendiciones.</p>
-                <div class="book-label lbljob">JOB</div>
+        <a class="ezequiel" href="lessons/lesson40.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson40">40</div>
+                <h1 class="lesson-name">Llamamiento de Ezequiel</h1>
+                <p class="lesson-date">2023-12-17</p>
+                <p class="lesson-verse">Ezequiel 1:1 a 3:27</p>
+                <p class="lesson-description">Dios no se olvida de su pueblo en el cautiverio, Ezequiel es llamado a ser
+                    su vocero y centinela del pueblo que ha abandonado su fe.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="job" href="lesson/lesson41.html">
-            <div class="card box-job" >
-                <div class="lesson-number lbljob" id="lesson41">41</div>
-                <h1 class="lesson-name">Satanás y el sufrimiento humano</h1>
-                <p class="lesson-date">08 enero 2023</p>
-                <p class="lesson-verse">Job 2:1-13</p>
-                <p class="lesson-description">El poder que tiene Satanás le es concedido por Dios, quien le pone límites a sus acciones destructoras.</p>
-                <div class="book-label lbljob">JOB</div>
+        <a class="ezequiel" href="lessons/lesson41.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson41">41</div>
+                <h1 class="lesson-name">Israel juzgado por su pecado</h1>
+                <p class="lesson-date">2023-12-24</p>
+                <p class="lesson-verse">Ezequiel 4:1 a 7:27</p>
+                <p class="lesson-description">Judá se rebeló contra Dios y no cumplió su misión a las naciones. El
+                    castigo fue su destrucción, siendo así ejemplo de la justicia y la integridad de Dios.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="job" href="lesson/lesson42.html">
-            <div class="card box-job" >
-                <div class="lesson-number lbljob" id="lesson42">42</div>
-                <h1 class="lesson-name">Lamentaciones de alguien que sufre</h1>
-                <p class="lesson-date">15 enero 2023</p>
-                <p class="lesson-verse">Job 3:1-26</p>
-                <p class="lesson-description">El dolor físico puede forzar auna persona a actuar en maneras fuera de sí, insensatamente, pero Dios le comprende, no le abandona.</p>
-                <div class="book-label lbljob">JOB</div>
+        <a class="ezequiel" href="lessons/lesson42.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson42">42</div>
+                <h1 class="lesson-name">Idolatría, castigo y recreación</h1>
+                <p class="lesson-date">2023-12-31</p>
+                <p class="lesson-verse">Ezequiel 8:1 a 11:25</p>
+                <p class="lesson-description">Dios prepara el camino para que su pueblo, purificado por su castigo,
+                    pueda regresar a la tierra prometida. Quitará su corazón pecaminoso de piedra y les dará un corazón
+                    de carne y un espíritu nuevo.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="job" href="lesson/lesson43.html">
-            <div class="card box-job" >
-                <div class="lesson-number lbljob" id="lesson43">43</div>
-                <h1 class="lesson-name">Amigos que consuelan</h1>
-                <p class="lesson-date">22 enero 2023</p>
-                <p class="lesson-verse">Job 4:1 a 20:29</p>
-                <p class="lesson-description">Los amigos de Job expresaron las explicaciones comunes en su día, las cuales declaraban que el pecado trae sufrimiento. Estas declaraciones, aunque están en la Biblia, no representan la verdad desde el punto de vista de Dios.</p>
-                <div class="book-label lbljob">JOB</div>
+        <a class="ezequiel" href="lessons/lesson43.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson43">43</div>
+                <h1 class="lesson-name">La caída de Jerusalén</h1>
+                <p class="lesson-date">2024-01-07</p>
+                <p class="lesson-verse">Ezequiel 12 a 15</p>
+                <p class="lesson-description">A pesar de que los judíos en Judá y en el cautiverio creían que Dios no
+                    destruiría Jerusalén, esto sí pasó por el pecado de su pueblo y su falta de arrepentimiento.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="job" href="lesson/lesson44.html">
-            <div class="card box-job" >
-                <div class="lesson-number lbljob" id="lesson44">44</div>
-                <h1 class="lesson-name">Dios habla en el torbellino</h1>
-                <p class="lesson-date">29 enero 2023</p>
-                <p class="lesson-verse">Job 21:1 a 40:2</p>
-                <p class="lesson-description">Aunque a veces no reconocemos que Dios está a nues- tro lado, él es fiel y siempre está actuando a nuestro favor permaneciendo en nosotros y en nuestras circunstancias.</p>
-                <div class="book-label lbljob">JOB</div>
+        <a class="ezequiel" href="lessons/lesson44.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson44">44</div>
+                <h1 class="lesson-name">Jucio y esperanza</h1>
+                <p class="lesson-date">2024-01-14</p>
+                <p class="lesson-verse">Ezequiel 16:1 a 18:18</p>
+                <p class="lesson-description">Jerusalén se había prostituido con otras naciones y religiones en lugar de
+                    ser fiel al Señor. Su destrucción es segura, pero el Señor da a su pueblo esperanza de un principio
+                    nuevo.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="job" href="lesson/lesson45.html">
-            <div class="card box-job" >
-                <div class="lesson-number lbljob" id="lesson45">45</div>
-                <h1 class="lesson-name">Job reconoce el poder de Dios</h1>
-                <p class="lesson-date">05 febrero 2023</p>
-                <p class="lesson-verse">Job 40:3 a 42:17</p>
-                <p class="lesson-description">La paciencia del ser humano frente a las pruebas y un corazón humilde, es la mejor manera de enfrentarlas para salir victorioso de ellas.</p>
-                <div class="book-label lbljob">JOB</div>
+        <a class="ezequiel" href="lessons/lesson45.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson45">45</div>
+                <h1 class="lesson-name">Responsables pro nuestros actos</h1>
+                <p class="lesson-date">2024-01-21</p>
+                <p class="lesson-verse">Ezequiel 18:19 a 24:27</p>
+                <p class="lesson-description">Cada persona es responsable por su pecado, y por su búsqueda del perdón
+                    ofrecido por el Señor. Al arrepentirse, adquirirá un corazón y un espíritu nuevos como dádivas de
+                    Dios.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="proverbios" href="lesson/lesson46.html">
-            <div class="card box-proverbios" >
-                <div class="lesson-number lblproverbios" id="lesson46">46</div>
-                <h1 class="lesson-name">La sabiduría nos encamina a vivir bien</h1>
-                <p class="lesson-date">12 febrero 2023</p>
-                <p class="lesson-verse">Proverbios 1:1 a 5:23</p>
-                <p class="lesson-description">La sabiduría, que es la combinación adecuada entre los conocimientos profundos y la reflexión moral y espiritual, es la base para una vida significativa y feliz.</p>
-                <div class="book-label lblproverbios">PROV</div>
+        <a class="ezequiel" href="lessons/lesson46.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson46">46</div>
+                <h1 class="lesson-name">Restauración de Israel</h1>
+                <p class="lesson-date">2024-01-28</p>
+                <p class="lesson-verse">Ezequiel 45:1 a 36:38</p>
+                <p class="lesson-description">El nombre santo de Dios será honrado por todas las naciones cuando su
+                    pueblo de purifique y reciba de él un corazón y un espíritu nuevos.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="proverbios" href="lesson/lesson47.html">
-            <div class="card box-proverbios" >
-                <div class="lesson-number lblproverbios" id="lesson47">47</div>
-                <h1 class="lesson-name">La clave del éxito</h1>
-                <p class="lesson-date">19 febrero 2023</p>
-                <p class="lesson-verse">Proverbios 6:1 a 12:28</p>
-                <p class="lesson-description">Las normas morales que han sido reveladas en la Biblia forman la única base segura para criar a los hijos en el camino de una vida exitosa.</p>
-                <div class="book-label lblproverbios">PROV</div>
+        <a class="ezequiel" href="lessons/lesson47.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson47">47</div>
+                <h1 class="lesson-name">El valle de los huesos secos</h1>
+                <p class="lesson-date">2024-02-04</p>
+                <p class="lesson-verse">Ezequiel 37:1 a 40:49</p>
+                <p class="lesson-description">Frente al desánimo del pueblo de Israel, Dios les da la visión de la
+                    restauración personal y nacional. Sabrán que es Dios quien ha hecho este milagro.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="proverbios" href="lesson/lesson48.html">
-            <div class="card box-proverbios" >
-                <div class="lesson-number lblproverbios" id="lesson48">48</div>
-                <h1 class="lesson-name">La mayordomía del tiempo y las posesiones</h1>
-                <p class="lesson-date">26 febrero 2023</p>
-                <p class="lesson-verse">Proverbios 13:1 a 22:29</p>
-                <p class="lesson-description">Para lograr la verdadera seguridad material, hay que ser responsable en el trabajo, honesto en los negocios, evitar deudas excesivas y no codiciar.</p>
-                <div class="book-label lblproverbios">PROV</div>
+        <a class="ezequiel" href="lessons/lesson48.html">
+            <div class="card box-ezequiel">
+                <div class="lesson-number lblezequiel" id="lesson48">48</div>
+                <h1 class="lesson-name">La presencia sanadora de Dios</h1>
+                <p class="lesson-date">2024-02-11</p>
+                <p class="lesson-verse">Ezequiel 41:1 a 48:35</p>
+                <p class="lesson-description">La esperanza cumplida de la nueva vida dada por Dios se verá en sus
+                    acciones de justicia, en su mensaje sanador y en su presencia constante con su pueblo.</p>
+                <div class="book-label lblezequiel">EZQ</div>
             </div>
         </a>
-        <a class="proverbios" href="lesson/lesson49.html">
-            <div class="card box-proverbios" >
-                <div class="lesson-number lblproverbios" id="lesson49">49</div>
-                <h1 class="lesson-name">El hogar feliz</h1>
-                <p class="lesson-date">05 marzo 2023</p>
-                <p class="lesson-verse">Proverbios 23:1 a 31:31</p>
-                <p class="lesson-description">Las relaciones armoniosas en el hogar fomentan la felicidad en todos sus miembros, esto es cuando cada uno aporta su parte para la armonía y la felicidad.</p>
-                <div class="book-label lblproverbios">PROV</div>
+        <a class="daniel" href="lessons/lesson49.html">
+            <div class="card box-daniel">
+                <div class="lesson-number lbldaniel" id="lesson49">49</div>
+                <h1 class="lesson-name">Fidelidad, a pesar del peligro</h1>
+                <p class="lesson-date">2024-02-18</p>
+                <p class="lesson-verse">Daniel 1:1 a 3:30</p>
+                <p class="lesson-description">La experiencia de Daniel y sus amigos al enfrentar el peligro, nos
+                    demuestra que Dios premia la fidelidad de sus hijos.</p>
+                <div class="book-label lbldaniel">DAN</div>
             </div>
         </a>
-        <a class="eclesiastes" href="lesson/lesson50.html">
-            <div class="card box-eclesiastes" >
-                <div class="lesson-number lbleclesiastes" id="lesson50">50</div>
-                <h1 class="lesson-name">El sentido de la vida</h1>
-                <p class="lesson-date">12 marzo 2023</p>
-                <p class="lesson-verse">Eclesiastés 1:1 a 6:12</p>
-                <p class="lesson-description">Quien busca el sentido de la vida por medio de adquirir cosas materiales, participar en actividades que le dan placer físico y por adquirir conocimientos, descubrirá que ninguna de esas cosas le brindan la verdadera felicidad ni el verdadero sentido a su vida.</p>
-                <div class="book-label lbleclesiastes">ECLE</div>
+        <a class="daniel" href="lessons/lesson50.html">
+            <div class="card box-daniel">
+                <div class="lesson-number lbldaniel" id="lesson50">50</div>
+                <h1 class="lesson-name">La protección de Dios</h1>
+                <p class="lesson-date">2024-02-25</p>
+                <p class="lesson-verse">Daniel 4:1 a 6:28</p>
+                <p class="lesson-description">La maldad y las maquinaciones del hombre no pueden obstaculizar la
+                    protección de Dios para sus siervos que le son fieles.</p>
+                <div class="book-label lbldaniel">DAN</div>
             </div>
         </a>
     </section>
 </body>
+
 </html>

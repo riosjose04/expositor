@@ -1,0 +1,50 @@
+@media (max-width: 1900px) {
+    #classes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    body{
+        width: 100%;
+        margin: auto;
+    }
+    .menu-option{
+        font-size: 20px;
+        margin: 15px 0px;
+    }
+}
+@media (max-width: 1373px) {
+    #classes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 890px) {
+    body{
+        width: 450px;
+        margin: auto;
+    }
+    #classes{
+        padding-left: 0px;
+    }
+    .left-space{
+        margin: auto;
+    }
+    #sidebar{
+        display: none;
+    }
+    #welcome{
+        font-size: 40px;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .header-label{
+        font-size: 20px;
+        margin: auto;
+        text-align: center;
+    }
+}
+@media (max-width: 375px) {
+    #classes{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
