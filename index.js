@@ -187,7 +187,7 @@ function searchClassByDate(){
             if(lessonsDates[index].innerHTML == String(lessonDate)){
                 console.log(lessonsDates[index].innerHTML);
                 console.log(lessonsNumbers[index].innerHTML);
-                window.location.href = `/lessons/lesson${lessonsNumbers[index].innerHTML}.html`
+                window.location.href = `https://riosjose04.github.io/expositor/lessons/lesson${lessonsNumbers[index].innerHTML}.html`
             }
         }
     }
